@@ -1,0 +1,59 @@
+body {
+    background-color: #4f5f76;
+    box-sizing: border-box;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.team-heading {
+    background-color: #091f36;
+    color: #b11a21;
+}
+
+
+.team-area {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card{
+    border-color: #323042;
+    margin: 10px;
+    background-color:  #e4decd;
+    box-shadow: 10px 10px #323042;
+}
+
+.list-group-item {
+    background-color:  #e4decd;
+}
+
+.manager {
+    width:90%;
+}
+
+.engineer {
+    width: 45%;
+}
+
+.intern {
+    width: 40%;
+}
+
+.manager>.card-header {
+    background-color: #0f2862;
+    color: #1dbab4;
+}
+
+.engineer>.card-header {
+    background-color: #9e363a;
+    color:#aaabad;
+}
+
+.intern>.card-header {
+    background-color:#2e3830;
+    color:#d0d4d7;
+}

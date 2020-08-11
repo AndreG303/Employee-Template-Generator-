@@ -57,10 +57,10 @@ function newEmployees() {
                     name: "managerName",
                     validate: answer => {
                         if (answer !== "") {
-                          return true;
+                            return true;
                         }
                         return "Please enter at least one character.";
-                      }
+                    }
                 },
 
                 {
@@ -95,13 +95,13 @@ function newEmployees() {
                     name: "managerOfficeNumber",
                     validate: answer => {
                         const pass = answer.match(
-                          /^[1-9]\d*$/
+                            /^[1-9]\d*$/
                         );
                         if (pass) {
-                          return true;
+                            return true;
                         }
                         return "Please enter a positive number greater than zero.";
-                      }
+                    }
                 }
 
             ]).then(userChoice => {
@@ -129,22 +129,36 @@ function newEmployees() {
                     name: "engineerName",
                     validate: answer => {
                         if (answer !== "") {
-                          return true;
+                            return true;
                         }
                         return "Please enter at least one character.";
-                      }
+                    }
                 },
 
                 {
                     type: "input",
                     message: "Please enter your employee ID?",
                     name: "engineerID",
+                    validate: answer => {
+                        const pass = answer.match(
+                            /^[1-9]\d*$/
+                        );
+                        if (pass) {
+                            return true;
+                        }
+                        return "Please enter a positive number greater than zero.";
+                    }
                 },
 
                 {
                     type: "input",
                     message: "Please enter your email?",
                     name: "engineerEmail",
+                    validate: answer => {
+                        const validEmail = answer.match(/\S+@\S+\.\S+/);
+                        if (validEmail) { return true; }
+                        return "Please enter a valid email address.";
+                    },
                 },
 
                 {
@@ -153,10 +167,10 @@ function newEmployees() {
                     name: "gitHubUsername",
                     validate: answer => {
                         if (answer !== "") {
-                          return true;
+                            return true;
                         }
                         return "Please enter at least one character.";
-                      }
+                    }
                 }
             ]).then(userChoice => {
                 console.log(userChoice);
@@ -181,25 +195,51 @@ function newEmployees() {
                 {
                     type: "input",
                     message: "Please enter your name?",
-                    name: "internName"
+                    name: "internName",
+                    validate: answer => {
+                        if (answer !== "") {
+                            return true;
+                        }
+                        return "Please enter at least one character.";
+                    }
                 },
 
                 {
                     type: "input",
                     message: "Please enter your employee ID?",
                     name: "internID",
+                    validate: answer => {
+                        const pass = answer.match(
+                            /^[1-9]\d*$/
+                        );
+                        if (pass) {
+                            return true;
+                        }
+                        return "Please enter a positive number greater than zero.";
+                    }
                 },
 
                 {
                     type: "input",
                     message: "Please enter your email?",
                     name: "internEmail",
+                    validate: answer => {
+                        const validEmail = answer.match(/\S+@\S+\.\S+/);
+                        if (validEmail) { return true; }
+                        return "Please enter a valid email address.";
+                    },
                 },
 
                 {
                     type: "input",
                     message: "Please enter your school?",
-                    name: "internSchool"
+                    name: "internSchool",
+                    validate: answer => {
+                        if (answer !== "") {
+                            return true;
+                        }
+                        return "Please enter at least one character.";
+                    }
                 }
             ]).then(userChoice => {
                 console.log(userChoice);
@@ -221,8 +261,6 @@ function teamBuild() {
     }
     fs.writeFileSync(outputPath, fileHtml, 'utf-8')
 }
-
-teamBuild
 module.exports = myTeam
 
 
