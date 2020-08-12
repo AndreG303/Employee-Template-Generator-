@@ -10,7 +10,7 @@ h1 {
 }
 
 .team-heading {
-    background-color: #091f36;
+    background-color:#091f36;
     color: #b11a21;
 }
 
@@ -21,14 +21,14 @@ h1 {
 }
 
 .card{
-    border-color: #323042;
+    border-color:#323042;
     margin: 10px;
     background-color:  #e4decd;
     box-shadow: 10px 10px #323042;
 }
 
 .list-group-item {
-    background-color:  #e4decd;
+    background-color:#e4decd;
 }
 
 .manager {
@@ -44,7 +44,7 @@ h1 {
 }
 
 .manager>.card-header {
-    background-color: #0f2862;
+    background-color:#0f2862;
     color: #1dbab4;
 }
 
